@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 30px;
+}
+
+.layout-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'side-bar content content right right right'
+    'footer footer footer footer  footer footer';
+  grid-gap: 10px;
+}
+.right{
+    grid-area: right;
+  border: 2px solid yellow;
+  background-color: red;  
+}
+.header {
+  grid-area: header;
+  border: 2px solid yellow;
+  background-color: yellowgreen;
+}
+
+.content1 {
+  grid-area: content;
+  border: 2px solid black;
+  background-color: green;
+  text-align: justify;
+}
+
+.side-bar {
+  grid-area: side-bar;
+  border: 2px solid black;
+  background-color: orange;
+}
+.footer {
+  grid-area: footer;
+  border: 2px solid black;
+  background-color: blue;
+}
+.header,
+.content,
+.side-bar,
+.footer {
+  padding: 20px;
+  margin: 0px;
+}
+
+.top {
+  float: right;
+}
+.top li {
+  display: inline;
+  padding: 10px;
+  list-style-type: none;
+}
+.top li a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
+.side li {
+  display: inline-block;
+  padding: 20px;
+  margin: 0 auto;
+}
+.side li a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .layout-container {
+    grid-template-areas:
+      'header header header header header header'
+      'side-bar side-bar side-bar side-bar side-bar side-bar'
+      'content content content content content content'
+      "right right right right right right"
+      'footer footer footer footer footer footer';
+  }
+  
+}
